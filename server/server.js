@@ -19,7 +19,7 @@ app.use('/api/payment/webhook', express.raw({type: 'application/json'}));
 
 // CORS middleware
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://imagify-image-generator.netlify.app');
+    res.header('Access-Control-Allow-Origin', 'https://imagify-text-to-image-converter.netlify.app');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, token');
     res.header('Access-Control-Allow-Credentials', 'true');
@@ -52,7 +52,7 @@ const startServer = async () => {
         // Start server
         app.listen(PORT, () => {
             console.log('🚀 Server is running on port:', PORT);
-            console.log('🔒 CORS enabled for: https://imagify-image-generator.netlify.app');
+            console.log('🔒 CORS enabled for: https://imagify-text-to-image-converter.netlify.app');
         });
     } catch (error) {
         console.error('❌ Failed to start server:', error);
