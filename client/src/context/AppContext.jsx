@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const AppContext = createContext(); // create your own context provider 
 
 const AppContextProvider = (props) => {
-    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'https://imagify-text-to-image-converter.onrender.com';
     
     const [user, setUser] = useState(null); // user logged in hai ya nahi 
 
